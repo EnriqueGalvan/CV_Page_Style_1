@@ -10,6 +10,7 @@ I create _CV Page Style #1_ with a selected kind of tools, there are:
 - HTML
 - [Jquery 3.3.1 slim](https://code.jquery.com/jquery-3.3.1.slim.min.js)
 - [Bootstrap v4.3.1](https://getbootstrap.com/docs/4.3/getting-started/download/) (Modified)
+- [Bootstrap Icons](https://icons.getbootstrap.com/)
 - [Popper](https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js)
 - CSS
 
