@@ -1,4 +1,4 @@
-# Welcome :) ## This is the code for my _CV Page Style #1_
+# Welcome :) 
+###### Created by [Enrique Galván](https://www.facebook.com/EnriqueGalvan.Dev/)
 
-
-###### Created by Enrique Galván
+This is the code for my _CV Page Style #1_,
