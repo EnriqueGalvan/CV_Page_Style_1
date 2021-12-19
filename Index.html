@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="file:///home/enrique/Documentos/CV_Page_Style_1/web_styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>    
+</head>
+    <body>
+        <div class="load-screen fade show d-flex align-items-center">
+            <div class="col-md-12 text-center">
+                <div class="spinner-grow text-dark" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+                <br>
+                <p class="text-secondary my-2"><b>Loading...</b></p>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top border-bottom">
+            <a class="navbar-brand" href="Index.html">Enrique Galván</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#info">Info<i class="bi-info-circle"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">Skills<i class="bi-award"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#works">Works<i class="bi-briefcase"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#follow_me">Follow me<i class="bi-link-45deg"></i></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
+                        More
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                        <h6 class="dropdown-header">Visit my web sites</h6>
+                        <a class="dropdown-item disabled" href="#">CV Page Style 2</a>
+                        <a class="dropdown-item disabled" href="#">CV Page Style 3</a>
+                        <a class="dropdown-item disabled" href="#">CV Page Style 4</a>
+                    </div>
+                </li>  
+                </ul>
+            </div>
+        </nav>
+    
+        <div class="navbar-guide">
+            <div id="info" class="navbar-section">
+                <div class="mt-2">
+                    <div class="d-flex">
+                        <div class="m-auto profile-pic"></div>
+                    </div>
+                </div>
+                <h2 class="m-3 text-center">Welcome
+                    <i class="bi-soundwave text-muted"></i>
+                    <audio class="d-none" controls>
+                        <source src="Sounds/Sound-01.mp3" type="audio/mp3">
+                            Tu navegador no soporta audio HTML5.
+                    </audio>
+                    <script>
+                        var audio = document.querySelector("audio");
+                        $(document.querySelector("i.bi-soundwave")).click(function() {
+                            if (audio.duration > 0 && !audio.paused) {
+                                //Its playing...
+                                $(this).addClass("text-muted").removeClass("text-primary")
+                                audio.pause();
+                            } else {
+                                //Not playing...
+                                $(this).addClass("text-primary").removeClass("text-muted")
+                                audio.play();
+                            }
+                        });
+                        audio.addEventListener("ended", function(){
+                            audio.currentTime = 0;
+                            console.log("ended");
+                            $(document.querySelector("i.bi-soundwave")).addClass("text-muted").removeClass("text-primary")
+                        });
+                    </script>
+                </h2>
+                <p class="mx-3 text-center">
+                    Let me introduce myself, I am <b>Enrique Galván</b>, a 23 year old guy with a bachelor's degree in information technology engineering, born and raised in Reynosa, Tamaulipas (México).
+                    <br>
+                    <br>
+                    The reason why I choose to create these web sites is to promote myself and expose my knowledge through different tools and technologies.
+                    This is my first <i><b>CV Page Style</b></i> example, I ussually do a lot of funny or detailed styles, please, visit my other examples by clicking in the "<b>More</b>" <b>Navbar menu button</b> above.
+                    <br>
+                    <br>
+                </p>
+                <hr>
+                <div class="row mx-auto">
+                    <div class="col-12 col-md-8">
+                        <p class="mx-3">
+                            I have created 4 sections on this website so you can click on any of them in the <b>Navbar menu</b> and see what I do, these are the following:
+                        </p>
+                        <ul>
+                            <li>
+                                <div class="text-dark"><b>Info</b><i class="ml-2 bi-info-circle"></i></div>
+                                <p>This is where you are, in this section I explain my purpose and who I am.</p>
+                            </li>
+                            <li>
+                                <div class="text-dark"><b>Skills</b><i class="ml-2 bi-award"></i></div>
+                                <p>The second section talks about my abilities/skills with different tools and technologies, also checked the ones that I use for this example.</p>
+                            </li>
+                            <li>
+                                <div class="text-dark"><b>Works</b><i class="ml-2 bi-briefcase"></i></div>
+                                <p>In this third section, I am going to list the works that I have done, also some personal programs or projects of mine, some of them ready to download.</p>
+                            </li>
+                            <li>
+                                <div class="text-dark"><b>Follow me</b><i class="ml-2 bi-link-45deg"></i></div>
+                                <p>Last but not least, if you are interested in contacting me, I will put my contact information and some videos that I make to teach others what I know.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-4 d-flex">
+                        <div id="icons-carousel" class="m-auto text-center">
+                            <div class="desktop-design">
+                                <i class="bi-laptop text-light px-4"></i>
+                                <p>Now you are seeing the <b>Desktop</b> design</p>
+                            </div>
+                            <div class="mobile-design">
+                                <i class="bi-phone text-light px-4 pt-3"></i>
+                                <p>Now you are seeing the <b>Mobile</b> design</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="skills" class="navbar-section">
+                <div class="col-md-12">
+                    <h2 class="mb-3"><b>Skills</b><i class="ml-2 bi-award"></i></h2>
+                    <p class="border-left border-light pl-2 text-justify">From elementary school to university I was always interested in <mark>create</mark> my own systems/programs to <mark>simplify</mark> my life, but then I thought of something better, <mark>share</mark> them with others, <mark>teach</mark> them, so here you can see all the tools and technologies that I know.
+                </div>
+                <br>
+                <div class="tools col-md-12">
+                    <div class="bg-light border p-3">
+                        <div class="row">
+                            <h3 class="col-md-3 text-secondary">All</h3>
+                            <div class="col-md-6"></div>
+                            <div class="col-md-3">
+                                <div class="input-group input-group-sm mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text bg-white" id="inputGroup-sizing-sm"><i class="bi-search"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control" id="search-tool" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Type to search">
+                                    <script>
+                                        document.getElementById("search-tool").addEventListener("input", function () {
+                                           console.log($(this).parent().parent().parent().parent().find(".tools-list").children()[0].childElementCount);
+                                           $($(this).parent().parent().parent().parent().find(".tools-list").children()[0]).children().each(function(){
+                                                if ($(this).children().children("p").children().html().toLowerCase().includes(document.getElementById("search-tool").value.toLowerCase())){
+                                                    $(this).addClass("d-block").removeClass("d-none")
+                                                }
+                                                else{
+                                                    $(this).addClass("d-none").removeClass("d-block")
+                                                }
+                                            });
+                                        })
+                                    </script>    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tools-list">
+                            <ul class="m-0 px-0 d-flex border-top py-1">
+                                <li class="mx-auto my-1" title="HyperText Markup Language">
+                                    <div class="text-center mx-auto p-1">
+                                        <i class="bi-file-earmark-code"></i>
+                                        <div>
+                                            <small>Base</small>
+                                        </div>
+                                        <p><b>HTML5</b></p>
+                                    </div>
+                                </li>
+                                <li class="mx-auto my-1" title="Cascading Style Sheets">
+                                    <div class="text-center mx-auto p-1">
+                                        <i class="bi-file-earmark-code"></i>
+                                        <div>
+                                            <small>Styles</small>
+                                        </div>
+                                        <p><b>CSS</b></p>
+                                    </div>
+                                </li>
+                                <li class="mx-auto my-1" title="Lenguaje de hoja de estilos en cascada">
+                                    <div class="text-center mx-auto p-1">
+                                        <i class="bi-file-earmark-code"></i>
+                                        <div>
+                                            <small>Styles</small>
+                                        </div>
+                                        <p><b>SCCS</b></p>
+                                    </div>
+                                </li>
+                                <li class="mx-auto my-1" title="Diseño web adaptable">
+                                    <div class="text-center mx-auto p-1">
+                                        <i class="bi-aspect-ratio"></i>
+                                        <div>
+                                            <small>Styles</small>
+                                        </div>
+                                        <p><b>Responsive Design</b></p>
+                                    </div>
+                                </li>
+                                <li class="mx-auto my-1" title="C Sharp">
+                                    <div class="text-center mx-auto p-1">
+                                        <i class="bi-code-slash"></i>
+                                        <div>
+                                            <small>Code</small>
+                                        </div>
+                                        <p><b>C#</b></p>
+                                    </div>
+                                </li>
+                                <li class="mx-auto my-1" title="Lenguaje de programación interpretado, reflexivo y orientado a objetos">
+                                    <div class="text-center mx-auto p-1">
+                                        <i class="bi-code-slash"></i>
+                                        <div>
+                                            <small>Code</small>
+                                        </div>
+                                        <p><b>Ruby</b></p>
+                                    </div>
+                                </li>
+                                <li class="mx-auto my-1" title="Lenguaje de programación interpretado">
+                                    <div class="text-center mx-auto p-1">
+                                        <i class="bi-code-slash"></i>
+                                        <div>
+                                            <small>Code</small>
+                                        </div>
+                                        <p><b>JavaScript</b></p>
+                                    </div>
+                                </li>
+                                <li class="mx-auto my-1" title="Biblioteca multiplataforma de JavaScript">
+                                    <div class="text-center mx-auto p-1">
+                                        <i class="bi-code-slash"></i>
+                                        <div>
+                                            <small>Code</small>
+                                        </div>
+                                        <p><b>JQuery</b></p>
+                                    </div>
+                                </li>
+                                <li class="mx-auto my-1" title="Model - View - Controller">
+                                    <div class="text-center mx-auto p-1">
+                                        <i class="bi-files"></i>
+                                        <div>
+                                            <small>Design Patterns</small>
+                                        </div>
+                                        <p><b>MVC</b></p>
+                                    </div>
+                                </li>
+                                <li class="mx-auto my-1" title="Framework de aplicaciones web de código abierto escrito en el lenguaje de programación Ruby">
+                                    <div class="text-center mx-auto p-1">
+                                        <i class="bi-file-binary"></i>
+                                        <div>
+                                            <small>Framework</small>
+                                        </div>
+                                        <p><b>Ruby on rails</b></p>
+                                    </div>
+                                </li>
+                                <li class="mx-auto my-1" title="Framework ORM para la plataforma Microsoft .NET">
+                                    <div class="text-center mx-auto p-1">
+                                        <i class="bi-file-binary"></i>
+                                        <div>
+                                            <small>Framework</small>
+                                        </div>
+                                        <p><b>Entity framework</b></p>
+                                    </div>
+                                </li>
+                                <li class="mx-auto my-1" title="Microsoft Structured Query Language Server">
+                                    <div class="text-center mx-auto p-1">
+                                        <i class="bi-server"></i>
+                                        <div>
+                                            <small>Database</small>
+                                        </div>
+                                        <p><b>Microsoft SQL Server</b></p>
+                                    </div>
+                                </li>
+                                <li class="mx-auto my-1" title="Sistema de gestión de bases de datos relacional compatible con ACID">
+                                    <div class="text-center mx-auto p-1">
+                                        <i class="bi-server"></i>
+                                        <div>
+                                            <small>Database</small>
+                                        </div>
+                                        <p><b>SQLite 3</b></p>
+                                    </div>
+                                </li>
+                                <li class="mx-auto my-1" title="Sistema de base de datos NoSQL">
+                                    <div class="text-center mx-auto p-1">
+                                        <i class="bi-server"></i>
+                                        <div>
+                                            <small>Database</small>
+                                        </div>
+                                        <p><b>MongoDB</b></p>
+                                    </div>
+                                </li>
+                                <li class="mx-auto my-1" title="Bootstrap v4.6">
+                                    <div class="text-center mx-auto p-1">
+                                        <i class="bi-bootstrap"></i>
+                                        <div>
+                                            <small>Styles / Framework</small>
+                                        </div>
+                                        <p><b>Bootstrap</b></p>
+                                    </div>
+                                </li>
+                                <li class="mx-auto my-1" title="Bootstrap v1.7.2">
+                                    <div class="text-center mx-auto p-1">
+                                        <i class="bi-bootstrap-fill"></i>
+                                        <div>
+                                            <small>Icons</small>
+                                        </div>
+                                        <p><b>Bootstrap Icons</b></p>
+                                    </div>
+                                </li>
+                                <li class="mx-auto my-1" title="Entorno de desarrollo integrado para Windows y macOS">
+                                    <div class="text-center mx-auto p-1">
+                                        <i class="bi-window"></i>
+                                        <div>
+                                            <small>Work Environment</small>
+                                        </div>
+                                        <p><b>Visual Studio 2017 Community</b></p>
+                                    </div>
+                                </li>
+                                <li class="mx-auto my-1" title="Editor de código fuente desarrollado por Microsoft para Windows, Linux, macOS y Web">
+                                    <div class="text-center mx-auto p-1">
+                                        <i class="bi-window"></i>
+                                        <div>
+                                            <small>Code Editor</small>
+                                        </div>
+                                        <p><b>Visual Studio Code</b></p>
+                                    </div>
+                                </li>
+                                <li class="mx-auto my-1" title="Suite ofimática de aplicaciones para escritorio, servidores y servicios">
+                                    <div class="text-center mx-auto p-1">
+                                        <i class="bi-microsoft"></i>
+                                        <div>
+                                            <small>Others</small>
+                                        </div>
+                                        <p><b>Microsoft Office</b></p>
+                                    </div>
+                                </li>
+                                <li class="mx-auto my-1" title="Software de control de versiones">
+                                    <div class="text-center mx-auto p-1">
+                                        <i class="bi-git"></i>
+                                        <div>
+                                            <small>Version Control / Backup</small>
+                                        </div>
+                                        <p><b>Git</b></p>
+                                    </div>
+                                </li>
+                                <li class="mx-auto my-1" title="Forja para alojar proyectos utilizando el sistema de control de versiones Git">
+                                    <div class="text-center mx-auto p-1">
+                                        <i class="bi-github"></i>
+                                        <div>
+                                            <small>Backup Hosting</small>
+                                        </div>
+                                        <p><b>GitHub</b></p>
+                                    </div>
+                                </li>
+                                <li class="mx-auto my-1" title="Microsoft Windows">
+                                    <div class="text-center mx-auto p-1">
+                                        <i class="bi-windows"></i>
+                                        <div>
+                                            <small>Operative System</small>
+                                        </div>
+                                        <p><b>Microsoft Windows</b></p>
+                                    </div>
+                                </li>
+                                <li class="mx-auto my-1" title="Distribución basada en Debian GNU/Linux diseñada principalmente para la auditoría y seguridad informática en general">
+                                    <div class="text-center mx-auto p-1">
+                                        <i class="bi-window-desktop"></i>
+                                        <div>
+                                            <small>Operative System</small>
+                                        </div>
+                                        <p><b>Kali Linux</b></p>
+                                    </div>
+                                </li>
+                                <li class="mx-auto my-1" title="Tools that cannot yet be specified or added">
+                                    <div class="text-center mx-auto p-1">
+                                        <i class="bi-plus-circle-dotted"></i>
+                                        <div>
+                                            <small>Soon</small>
+                                        </div>
+                                        <p><b>And more...</b></p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="text-muted text-center">Some tools or technologies are very specific so it has been omitted, more will be added continuously</p>
+                        <hr>
+                        <div class="row">
+                            <h3 class="col-md-12 mb-3 text-secondary">Used here</h3>
+                        </div>
+                        <div class="tools-list">
+                            <ul class="m-0 p-0 d-flex border-top pt-1">
+                                <li class="mx-auto my-1" title="HyperText Markup Language">
+                                    <div class="text-center mx-auto p-1">
+                                        <i class="bi-file-earmark-code"></i>
+                                        <div>
+                                            <small>Base</small>
+                                        </div>
+                                        <p><b>HTML5</b></p>
+                                    </div>
+                                </li>
+                                <li class="mx-auto my-1" title="Cascading Style Sheets">
+                                    <div class="text-center mx-auto p-1">
+                                        <i class="bi-file-earmark-code"></i>
+                                        <div>
+                                            <small>Styles</small>
+                                        </div>
+                                        <p><b>CSS</b></p>
+                                    </div>
+                                </li>
+                                <li class="mx-auto my-1" title="Diseño web adaptable">
+                                    <div class="text-center mx-auto p-1">
+                                        <i class="bi-aspect-ratio"></i>
+                                        <div>
+                                            <small>Styles</small>
+                                        </div>
+                                        <p><b>Responsive Design</b></p>
+                                    </div>
+                                </li>
+                                <li class="mx-auto my-1" title="Lenguaje de programación interpretado">
+                                    <div class="text-center mx-auto p-1">
+                                        <i class="bi-code-slash"></i>
+                                        <div>
+                                            <small>Code</small>
+                                        </div>
+                                        <p><b>JavaScript</b></p>
+                                    </div>
+                                </li>
+                                <li class="mx-auto my-1" title="Biblioteca multiplataforma de JavaScript">
+                                    <div class="text-center mx-auto p-1">
+                                        <i class="bi-code-slash"></i>
+                                        <div>
+                                            <small>Code</small>
+                                        </div>
+                                        <p><b>JQuery</b></p>
+                                    </div>
+                                </li>
+                                <li class="mx-auto my-1" title="Bootstrap v4.6">
+                                    <div class="text-center mx-auto p-1">
+                                        <i class="bi-bootstrap"></i>
+                                        <div>
+                                            <small>Styles / Framework</small>
+                                        </div>
+                                        <p><b>Bootstrap</b></p>
+                                    </div>
+                                </li>
+                                <li class="mx-auto my-1" title="Bootstrap v1.7.2">
+                                    <div class="text-center mx-auto p-1">
+                                        <i class="bi-bootstrap-fill"></i>
+                                        <div>
+                                            <small>Icons</small>
+                                        </div>
+                                        <p><b>Bootstrap Icons</b></p>
+                                    </div>
+                                </li>
+                                <li class="mx-auto my-1" title="Editor de código fuente desarrollado por Microsoft para Windows, Linux, macOS y Web">
+                                    <div class="text-center mx-auto p-1">
+                                        <i class="bi-window"></i>
+                                        <div>
+                                            <small>Code Editor</small>
+                                        </div>
+                                        <p><b>Visual Studio Code</b></p>
+                                    </div>
+                                </li>
+                                <li class="mx-auto my-1" title="Suite ofimática de aplicaciones para escritorio, servidores y servicios">
+                                    <div class="text-center mx-auto p-1">
+                                        <i class="bi-microsoft"></i>
+                                        <div>
+                                            <small>Others</small>
+                                        </div>
+                                        <p><b>Microsoft Office</b></p>
+                                    </div>
+                                </li>
+                                <li class="mx-auto my-1" title="Software de control de versiones">
+                                    <div class="text-center mx-auto p-1">
+                                        <i class="bi-git"></i>
+                                        <div>
+                                            <small>Version Control / Backup</small>
+                                        </div>
+                                        <p><b>Git</b></p>
+                                    </div>
+                                </li>
+                                <li class="mx-auto my-1" title="Forja para alojar proyectos utilizando el sistema de control de versiones Git">
+                                    <div class="text-center mx-auto p-1">
+                                        <i class="bi-github"></i>
+                                        <div>
+                                            <small>Backup Hosting</small>
+                                        </div>
+                                        <p><b>GitHub</b></p>
+                                    </div>
+                                </li>
+                                <li class="mx-auto my-1" title="Microsoft Windows">
+                                    <div class="text-center mx-auto p-1">
+                                        <i class="bi-windows"></i>
+                                        <div>
+                                            <small>Operative System</small>
+                                        </div>
+                                        <p><b>Microsoft Windows</b></p>
+                                    </div>
+                                </li>
+                                <li class="mx-auto my-1" title="Distribución basada en Debian GNU/Linux diseñada principalmente para la auditoría y seguridad informática en general">
+                                    <div class="text-center mx-auto p-1">
+                                        <i class="bi-window-desktop"></i>
+                                        <div>
+                                            <small>Operative System</small>
+                                        </div>
+                                        <p><b>Kali Linux</b></p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row mx-auto">
+                    <div class="col-12 col-md-5">
+                        <p class="pl-2">You can also see my top <b>12 skills</b> that govern me.</p>
+                        <ol>
+                            <li> Creativity.</li>
+                            <li> Friendly personality.</li>
+                            <li> Honesty.</li>
+                            <li> Public speaking.</li>
+                            <li> Initiative capacity.</li>
+                            <li> Optimistic attitude.</li>
+                            <li> Adaptability.</li>
+                            <li> Identification of errors.</li>
+                            <li> Strategic thinking.</li>
+                            <li> Loyalty.</li>
+                            <li> Team management.</li>
+                            <li> Versatility.</li>
+                        </ol>    
+                    </div>
+                    <div class="col-12 col-md-2"></div>
+                    <div class="col-12 col-md-5">
+                        <div class="d-flex h-100 p-3">
+                            <h2 class="m-auto p-3 border border-secondary bg-info shadow text-white text-center rounded">
+                                <b>English Level:</b>
+                                <br>
+                                <small><b>C1</b></small>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="works" class="navbar-section">
+                <div class="col-md-12">
+                    <h2 class="mb-3"><b> Works</b><i class="ml-2 bi-briefcase"></i></h2>
+                    <p class="border-left border-light pl-2 text-justify">Sometimes I worked remotely, but mostly in person, now I will add information about the projects that I did, helped or could distribute for free through this medium.</p>
+                    <br>
+                    <div class="col-md-12">
+                        <h3 class="text-center"><b class="bg-secondary border rounded text-white py-1 px-3">Professional</b><span class="ml-2 badge badge-light">4</span></h3>
+                        <hr>
+                        <div>
+                            <ol class="m-0 p-0">
+                                <li class="my-4">
+                                    <div class="card">
+                                        <img src="Images/BGMinimalistnNF.jpg" class="card-img-top" alt="Web site">
+                                        <div class="card-body bg-light">
+                                          <h5 class="card-title"><b>Web site</b><small class="ml-2">Mercería el Botón</small></h5>
+                                          <h6 class="card-subtitle mb-3 text-muted">05/2018 - 09/2018. Reynosa, Tamaulipas.</h6>
+                                          <p class="card-text text-justify px-2">I developed and designed a ‘catalog-type website’ to advertise the products and services offered 
+                                            by ‘Mercería el Botón’, with options and catalog design, security system for users, ordering, and 
+                                            product updates.</p>
+                                        </div>
+                                      </div>
+                                </li>
+                                <li class="my-4">
+                                    <div class="card">
+                                        <img src="Images/BGMinimalistnNF.jpg" class="card-img-top" alt="Web platform & assistance system">
+                                        <div class="card-body bg-light">
+                                          <h5 class="card-title"><b>Web platform & assistance system</b><small class="ml-2">Universidad Tecnológica de Tamaulipas Norte.</small></h5>
+                                          <h6 class="card-subtitle mb-3 text-muted">09/2018 - 05/2019. Reynosa, Tamaulipas.</h6>
+                                          <p class="card-text text-justify px-2">I developed and designed the project of a ‘web platform for Student Assistance’, in conjunction with 
+                                            a desktop application that registered the fingerprints of the teaching staff and students for the 
+                                            Universidad Tecnológica de Tamaulipas Norte.
+                                            </p>
+                                        </div>
+                                      </div>
+                                </li>
+                                <li class="my-4">
+                                    <div class="card">
+                                        <img src="Images/BGMinimalistnNF.jpg" class="card-img-top" alt="Web platform">
+                                        <div class="card-body bg-light">
+                                          <h5 class="card-title"><b>Web platform</b><small class="ml-2">Universidad Tecnológica de Tamaulipas Norte.</small></h5>
+                                          <h6 class="card-subtitle mb-3 text-muted">04/2019 - 01/2020. Reynosa, Tamaulipas.</h6>
+                                          <p class="card-text text-justify px-2">I led the design and development of an ‘English Courses Registration website’ for the Instituto 
+                                            Tecnológico de Reynosa with a team. At the same time I 
+                                            implemented a web platform to monitor internet use in each government institution in the city of 
+                                            Reynosa, Tamaulipas. I temporarily taught face-to-face classes to the students of the facilities to 
+                                            share my knowledge about the technologies used in the development of Web Sites.
+                                            </p>
+                                        </div>
+                                      </div>
+                                </li>
+                                <li class="my-4">
+                                    <div class="card">
+                                        <img src="Images/BGMinimalistnNF.jpg" class="card-img-top" alt="Module integration">
+                                        <div class="card-body bg-light">
+                                          <h5 class="card-title"><b>Module integration</b><small class="ml-2">VIVENDO: Desarrollo Web & Apps.</small></h5>
+                                          <h6 class="card-subtitle mb-3 text-muted">12/2020 - 05/2021. Remotely.</h6>
+                                          <p class="card-text text-justify px-2">I participated together with a team of 3 people in the development of a set of different websites, at 
+                                            the same time that I developed a project of stays based on a web platform that could manage the 
+                                            administration of Droplets or also known as virtual machines located in the cloud.
+                                            </p>
+                                        </div>
+                                      </div>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="col-md-12">
+                        <h3 class="text-center"><b class="bg-secondary border rounded text-white py-1 px-3">Personal</b><span class="ml-2 badge badge-light">3</span></h3>
+                        <hr>
+                        <div>
+                            <ol class="m-0 p-0">
+                                <li class="my-4">
+                                    <div class="card">
+                                        <img src="Gifs/P1.gif" class="card-img-top" alt="Subnet calculator and binary-decimal (vice versa) conversor">
+                                        <div class="card-body bg-light">
+                                          <h5 class="card-title"><b>Subnet calculator and binary-decimal (vice versa) conversor</b><small class="ml-2">Personal use</small></h5>
+                                          <h6 class="card-subtitle mb-3 text-muted">In development - <i class="bi-windows mx-2"></i> Windows only. 
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-sm btn-link"><i class="bi-cloud-download"></i></button>
+                                                <button type="button" class="btn btn-sm btn-light dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
+                                                  <span class="sr-only">Toggle Dropdown</span>
+                                                </button>
+                                                <div class="dropdown-menu">
+                                                  <a class="dropdown-item" href="javascript:void(0);">Waiting</a>
+                                                  <div class="dropdown-divider"></div>
+                                                  <h6 class="dropdown-header">Currently</h6>
+                                                  <a class="dropdown-item" href="javascript:void(0);">v0.0</a>
+                                                </div>
+                                              </div>
+                                          </h6>
+                                          <p class="card-text text-justify px-2">This C# program allows you to subnet an IP and all its information or steps, also help you with the conversions of decimal or binary numbers.</p>
+                                        </div>
+                                      </div>
+                                </li>
+                                <li class="my-4">
+                                    <div class="card">
+                                        <img src="Gifs/P2.gif" class="card-img-top" alt="School teaching & evaluation system">
+                                        <div class="card-body bg-light">
+                                          <h5 class="card-title"><b>School teaching & evaluation system</b><small class="ml-2">Comercial use</small></h5>
+                                          <h6 class="card-subtitle mb-3 text-muted">In development - <i class="bi-windows mx-2"></i> Windows only. 
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-sm btn-link" disabled><i class="bi-cloud-slash"></i></button>
+                                          </h6>
+                                          <p class="card-text text-justify px-2">This C# program is for any school grade, teachers can use it for local evaluations or apply homework remotely, each evaluation could be customized and a document can be generated with its results, available formats: Word, Excel, and txt file.</p>
+                                        </div>
+                                      </div>
+                                </li>
+                                <li class="my-4">
+                                    <div class="card">
+                                        <img src="Images/BGMinimalistnCS.jpg" class="card-img-top" alt="Comming soon">
+                                        <div class="card-body bg-light">
+                                          <h5 class="card-title"><b>More examples will be added</b><small class="ml-2">Indeterminate</small></h5>
+                                          <h6 class="card-subtitle mb-3 text-muted">In development - <i class="bi-question-circle mx-2"></i> Uncategorized. 
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-sm btn-link" disabled><i class="bi-cloud-plus"></i></button>
+                                          </h6>
+                                          <p class="card-text text-justify px-2">Some tools or technologies are very specific so it has been omitted, more will be added continuously.</p>
+                                        </div>
+                                      </div>
+                                </li>
+                            </ol>
+                        </div>   
+                    </div>
+                </div>
+            </div>
+            <div id="follow_me" class="navbar-section">
+                <div class="col-md-12">
+                    <h2 class="mb-3"><b>Follow me</b><i class="ml-2 bi-link-45deg"></i></h2>
+                    <p class="border-left border-light pl-2 text-justify">I am always listening to help you, do not worry about the time, just contact me in one o these options.</p>
+                    <br>
+                    <div class="col-md-12">
+                        <div class="row mx-auto">
+                            <div class="col-md-2 bg-secondary text-white d-flex text-center py-2">
+                                <p><b>QR CODE & FACEBOOK</b></p>
+                            </div>
+                            <div class="col-md-2 d-flex align-items-center">
+                                <div class="m-auto text-center">
+                                    <i class="bi-qr-code text-dark"></i>
+                                    <br>
+                                    <a href="Images/Scan.png" download="Enrique Galván QR Code">Download</a>
+                                </div>
+                            </div>
+                            <p class="col-md-3 text-justify"><b>Scan this QR Code to find my email.</b>
+                                <br>
+                                <br>
+                                Please, send me a message with your requirements or any doubt, so I can answer you with more detail between 1 or 2 days.
+                            </p>
+                            <div class="col-md-2 d-flex align-items-center">
+                                <div class="m-auto text-center">
+                                    <i class="bi-facebook text-primary"></i>
+                                    <br>
+                                    <a href="https://www.facebook.com/EnriqueGalvan.Dev/">Visit</a>
+                                </div>
+                            </div>
+                            <p class="col-md-3 text-justify"><b>Visit my Facebook.</b>
+                                <br>
+                                <br>
+                                See more about my publications and new items in my personal Facebook page.
+                            </p>
+                        </div>
+                        <br>
+                        <div class="row mx-auto">
+                            <div class="col-md-2 d-flex align-items-center">
+                                <div class="m-auto text-center">
+                                    <i class="bi-youtube text-danger"></i>
+                                    <br>
+                                    <a href="https://www.youtube.com/">Visit</a>
+                                </div>
+                            </div>
+                            <p class="col-md-3 text-justify"><b>Visit my personal YouTube channel.</b>
+                                <br>
+                                <br>
+                                I prepared this channel to teach you, guide you, give you examples, and so much more to help you and explain you this beautiful knowledge.
+                            </p>
+                            <div class="col-md-2 bg-danger text-white d-flex text-center py-2">
+                                <p><b>YOUTUBE</b></p>
+                            </div>
+                            <div class="col-md-2 d-flex align-items-center">
+                                <div class="m-auto text-center">
+                                    <i class="bi-youtube text-danger"></i>
+                                    <br>
+                                    <a href="https://www.youtube.com/">Visit</a>
+                                </div>
+                            </div>
+                            <p class="col-md-3 text-justify"><b>Visit my professional YouTube channel.</b>
+                                <br>
+                                <br>
+                                If you are interested about my experience in the professional area, please, enter here and follow me, I will be talking about the previous jobs I have done and the next ones.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <footer class="bg-dark text-white col-md-12 py-3 text-justify">
+            <div class="row mx-auto">
+                <div class="col-md-6 mb-4">
+                    <div>
+                        <b>Web page details:</b>
+                    </div>
+                    <br>
+                    <ul class="m-0 p-0">
+                        <li><small><b>Time of creation:</b> 3 days.</small></li>
+                        <li><small><b><i>CV Page Style 1</i> is allocated on</b>: <a href="https://pages.github.com/">GitHub Pages</a>.</small></li>
+                        <li><small><b>All the resources are:</b> Free to use or created by myself.</small></li>
+                        <li><small><b>First time of publication:</b> 19/12/21.</small></li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <div>
+                        <b>Personal recommendations:</b>
+                    </div>
+                    <br>
+                    <ul class="m-0 p-0">
+                        <li><small><b>Be curious and have fun:</b> if there is no curiosity, you cannot have fun and you will be overwhelmed.</small></li>
+                        <li><small><b>Spend only a couple of hours a day</b>: you need to rest, do it.</small></li>
+                        <li><small><b>Did you find it?</b></small></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="text-center m-0">All rights reserved.</p>
+        </footer>
+    </body>
+</html>
+<script>
+    var c = 1;
+    $("#info").find(".profile-pic").click(function() {
+        if (c == 13){
+            c = 0
+            console.log("A photo of meowself uwu")
+            $(this).css("background-image", "url(Images/Meowself.jpg)");  
+            $(this).css("transform", "rotateX(360deg)");  
+        }
+        else{
+            c++
+            $(this).css("transform", "rotateX(0deg)");  
+            $(this).css("background-image", "url(Images/Myself.png)");  
+        }
+    });
+
+    $(window).on("load", function() {
+        $(document.querySelector(".load-screen")).removeClass("show").addClass("hide");
+        $(document.querySelector(".load-screen")).css("z-index", "-1");  
+    });
+</script>
