@@ -235,7 +235,7 @@ display: block;
     writing-mode: unset;
     margin: auto;
 }
-    .navbar-section#follow_me > div > div > div > div > div > i{
+.navbar-section#follow_me > div > div > div > div > div > i{
     font-size: xxx-large;
 }
 
@@ -257,6 +257,9 @@ footer ul {
     }
         .navbar-section#info > .row > div > div#icons-carousel > div.mobile-design{
             display: none;
+        }
+        .navbar-section#skills > .tools > div > div.tools-list > ul{
+            overflow-y: auto;
         }
         .navbar-section#skills > .tools > div > div.tools-list > ul > li{
             width: 10rem;
