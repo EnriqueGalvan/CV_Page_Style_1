@@ -90,7 +90,7 @@
                     </script>
                 </h2>
                 <p class="mx-3 text-center">
-                    Let me introduce myself, I am <b>Enrique Galván</b>, a 23 year old guy with a bachelor's degree in information technology engineering, born and raised in Reynosa, Tamaulipas (México).
+                    Let me introduce myself, I am <b>Enrique Galván</b>, a <span></span> year old guy with a bachelor's degree in information technology engineering, born and raised in Reynosa, Tamaulipas (México).
                     <br>
                     <br>
                     The reason why I choose to create these web sites is to promote myself and expose my knowledge through different tools and technologies.
@@ -244,7 +244,7 @@
                                         <p><b>JQuery</b></p>
                                     </div>
                                 </li>
-                                <li class="mx-auto my-1" title="Model - View - Controller">
+                                <li class="mx-auto my-1" title="Modelo - Vista - Controlador">
                                     <div class="text-center mx-auto p-1">
                                         <i class="bi-files"></i>
                                         <div>
@@ -259,7 +259,7 @@
                                         <div>
                                             <small>Framework</small>
                                         </div>
-                                        <p><b>Ruby on rails</b></p>
+                                        <p><b>Ruby on Rails</b></p>
                                     </div>
                                 </li>
                                 <li class="mx-auto my-1" title="Framework ORM para la plataforma Microsoft .NET">
@@ -359,6 +359,15 @@
                                             <small>Backup Hosting</small>
                                         </div>
                                         <p><b>GitHub</b></p>
+                                    </div>
+                                </li>
+                                <li class="mx-auto my-1" title="Static site hosting service">
+                                    <div class="text-center mx-auto p-1">
+                                        <i class="bi-hdd-network"></i>
+                                        <div>
+                                            <small>Hosting</small>
+                                        </div>
+                                        <p><b>GitHub Pages</b></p>
                                     </div>
                                 </li>
                                 <li class="mx-auto my-1" title="Microsoft Windows">
@@ -494,6 +503,15 @@
                                             <small>Backup Hosting</small>
                                         </div>
                                         <p><b>GitHub</b></p>
+                                    </div>
+                                </li>
+                                <li class="mx-auto my-1" title="Static site hosting service">
+                                    <div class="text-center mx-auto p-1">
+                                        <i class="bi-hdd-network"></i>
+                                        <div>
+                                            <small>Hosting</small>
+                                        </div>
+                                        <p><b>GitHub Pages</b></p>
                                     </div>
                                 </li>
                                 <li class="mx-auto my-1" title="Microsoft Windows">
@@ -782,11 +800,25 @@
                 </div>
             </div>
             <hr>
-            <p class="text-center m-0">All rights reserved.</p>
+            <p class="text-center m-0"><span></span> - All rights reserved.</p>
         </footer>
     </body>
 </html>
 <script>
+    var today = new Date();
+    $("footer > p > span").html(today.getFullYear());
+
+    function getAge(dateString) {
+        var birthDate = new Date(dateString);
+        var age = today.getFullYear() - birthDate.getFullYear();
+        var m = today.getMonth() - birthDate.getMonth();
+        if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+            age--;
+        }
+        console.log(age)
+        return age;
+    }
+
     var c = 1;
     $("#info").find(".profile-pic").click(function() {
         if (c == 13){
@@ -805,5 +837,6 @@
     $(window).on("load", function() {
         $(document.querySelector(".load-screen")).removeClass("show").addClass("hide");
         $(document.querySelector(".load-screen")).css("z-index", "-1");  
+        $("#info > p.mx-3 > span").html(getAge("1998/05/13"))
     });
 </script>
