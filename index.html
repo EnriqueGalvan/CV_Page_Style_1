@@ -644,7 +644,10 @@
                             <ol class="m-0 p-0">
                                 <li class="my-4">
                                     <div class="card">
-                                        <img src="Gifs/P1.gif" class="card-img-top" alt="Subnet calculator and binary-decimal (vice versa) conversor">
+                                        <div class="d-flex align-items-center w-100 bg-secondary loading-item text-white">
+                                            <p class="w-100 text-center my-auto">Loading...</p>
+                                        </div>
+                                        <img src="" class="card-img-top works_personal_li d-none" alt="Subnet calculator and binary-decimal (vice versa) conversor">
                                         <div class="card-body bg-light">
                                           <h5 class="card-title"><b>Subnet calculator and binary-decimal (vice versa) conversor</b><small class="ml-2">Personal use</small></h5>
                                           <h6 class="card-subtitle mb-3 text-muted">In development - <i class="bi-windows mx-2"></i> Windows only. 
@@ -670,7 +673,10 @@
                                 </li>
                                 <li class="my-4">
                                     <div class="card">
-                                        <img src="Gifs/P2.gif" class="card-img-top" alt="School teaching & evaluation system">
+                                        <div class="d-flex align-items-center w-100 bg-secondary loading-item text-white">
+                                            <p class="w-100 text-center my-auto">Loading...</p>
+                                        </div>
+                                        <img src="" class="card-img-top works_personal_li d-none" alt="School teaching & evaluation system">
                                         <div class="card-body bg-light">
                                           <h5 class="card-title"><b>School teaching & evaluation system</b><small class="ml-2">Comercial use</small></h5>
                                           <h6 class="card-subtitle mb-3 text-muted">In development - <i class="bi-windows mx-2"></i> Windows only. 
@@ -684,7 +690,10 @@
                                 </li>
                                 <li class="my-4">
                                     <div class="card">
-                                        <img src="Images/BGMinimalistnCS.jpg" class="card-img-top" alt="Comming soon">
+                                        <div class="d-flex align-items-center w-100 bg-secondary loading-item text-white">
+                                            <p class="w-100 text-center my-auto">Loading...</p>
+                                        </div>
+                                        <img src="" class="card-img-top works_personal_li d-none" alt="Comming soon">
                                         <div class="card-body bg-light">
                                             <h5 class="card-title"><b>More examples will be added</b><small class="ml-2">Indeterminate</small></h5>
                                             <h6 class="card-subtitle mb-3 text-muted">In development - <i class="bi-question-circle mx-2"></i> Uncategorized. 
@@ -809,6 +818,7 @@
 </html>
 <script>
     var today = new Date();
+    
     $("footer > p > span").html(today.getFullYear());
 
     function getAge(dateString) {
@@ -818,7 +828,7 @@
         if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
             age--;
         }
-        console.log(age)
+        // console.log(age)
         return age;
     }
 
@@ -837,7 +847,24 @@
         }
     });
 
-    $(window).on("load", function() {
+    var works_personal = new Array();
+    var works_personal_li = document.querySelectorAll(".works_personal_li");
+    var works_personal_resources = ["Gifs/P1.gif", "Gifs/P2.gif", "Images/BGMinimalistnCS.jpg"]
+    for (let i = 0; i < works_personal_resources.length; i++) {
+        works_personal[i] = new Image();
+        works_personal[i].src = works_personal_resources[i];
+        item_load(works_personal[i], works_personal_li[i]);
+    }
+    function item_load(item, position) {
+        item.onload = function() {
+            // console.log(works_personal_li[i]);
+            console.log(item.src);
+            $(position).parent().find(".loading-item").removeClass("d-flex").addClass("d-none")
+            $(position).attr("src", item.src);
+            $(position).removeClass("d-none").addClass("d-block")
+        };
+    }
+    $(window).ready(function() {
         $(document.querySelector(".load-screen")).removeClass("show").addClass("hide");
         $(document.querySelector(".load-screen")).css("z-index", "-1");  
         $("#info > p.mx-3 > span").html(getAge("1998/05/13"))

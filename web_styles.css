@@ -215,7 +215,7 @@ display: block;
     scale: 1.01;
     box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
 }
-.navbar-section#works > div > div > div > ol > li > div > div > p{
+.navbar-section#works > div > div > div > ol > li > div > div > p.text-justify{
     height: 8rem;
     overflow-y: hidden;
 }
@@ -240,6 +240,13 @@ display: block;
     font-size: xxx-large;
 }
 
+.loading-item {
+    height: 15rem;
+}
+.loading-item > p {
+    height: max-content;
+    font-size: xx-large;
+}
 footer{
     font-family: Helvetica;
 }
