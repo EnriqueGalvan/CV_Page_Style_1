@@ -838,21 +838,21 @@
     var works_personal = new Array();
     var works_personal_li = document.querySelectorAll(".works_personal_li");
     var works_personal_resources = ["Gifs/P1.gif", "Gifs/P2.gif", "Images/BGMinimalistnCS.jpg"]
-    for (let i = 0; i < works_personal_resources.length; i++) {
-        works_personal[i] = new Image();
-        works_personal[i].src = works_personal_resources[i];
-        item_load(works_personal[i], works_personal_li[i]);
-    }
-    function item_load(item, position) {
-        item.onload = function() {
-            // console.log(works_personal_li[i]);
-            //console.log(item.src);
-            $(position).parent().find(".loading-item").removeClass("d-flex").addClass("d-none")
-            $(position).attr("src", item.src);
-            $(position).removeClass("d-none").addClass("d-block")
-        };
-    }
     $(window).ready(function() {
+        for (let i = 0; i < works_personal_resources.length; i++) {
+            works_personal[i] = new Image();
+            works_personal[i].src = works_personal_resources[i];
+            item_load(works_personal[i], works_personal_li[i]);
+        }
+        function item_load(item, position) {
+            item.onload = function() {
+                // console.log(works_personal_li[i]);
+                //console.log(item.src);
+                $(position).parent().find(".loading-item").removeClass("d-flex").addClass("d-none")
+                $(position).attr("src", item.src);
+                $(position).removeClass("d-none").addClass("d-block")
+            };
+        }
         $(document.querySelector(".load-screen")).removeClass("show").addClass("hide");
         $(document.querySelector(".load-screen")).css("z-index", "-1");  
         $("#info > p.mx-3 > span").html(getAge("1998/05/13"))
