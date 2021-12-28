@@ -826,8 +826,7 @@
         }
     });
 
-    $(window).ready(function() {
-        
+    $(document).ready(function() {
         $(document.querySelector(".load-screen")).removeClass("show").addClass("hide");
         $(document.querySelector(".load-screen")).css("z-index", "-1");  
         $("#info > p.mx-3 > span").html(getAge("1998/05/13"))
