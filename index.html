@@ -846,7 +846,7 @@
     function item_load(item, position) {
         item.onload = function() {
             // console.log(works_personal_li[i]);
-            console.log(item.src);
+            //console.log(item.src);
             $(position).parent().find(".loading-item").removeClass("d-flex").addClass("d-none")
             $(position).attr("src", item.src);
             $(position).removeClass("d-none").addClass("d-block")
