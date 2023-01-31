@@ -134,6 +134,7 @@ display: block;
     border-left-width: .5rem !important;
     color: darkslategray;
     line-height: 32px;
+    font-size: larger;
 }
   .navbar-section#skills > .tools{
       height: auto;
